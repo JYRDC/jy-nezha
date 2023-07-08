@@ -18,6 +18,6 @@ WORKDIR /dashboard
 COPY ./resource ./resource
 COPY dist/dashboard-${TARGETOS}-${TARGETARCH} ./app
 
-Railway ["/dashboard/data"]
+VOLUME ["/dashboard/data"]
 EXPOSE 80 5555
 ENTRYPOINT ["/entrypoint.sh"]
